@@ -1,0 +1,22 @@
+{
+  "name": "carno-php/process",
+  "license": "MIT",
+  "require": {
+    "carno-php/promise": "^1.0",
+    "carno-php/log-slim": "^1.0"
+  },
+  "suggest": {
+    "ext-swoole": "Process manager by swoole"
+  },
+  "autoload": {
+    "psr-4": {
+      "Carno\\Process\\": "src"
+    }
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
