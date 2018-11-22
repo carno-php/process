@@ -83,7 +83,7 @@ trait Forking
             }
 
             // progress notify
-            Progress::started(posix_getpid(), $this->name);
+            Progress::started(getmypid(), $this->name);
 
             // start pipe reading
             $this->forked->reading();
@@ -141,7 +141,7 @@ trait Forking
      */
     final private function exited(int $sig = 0, Throwable $e = null) : void
     {
-        Progress::exited(posix_getpid(), $sig, $e ? 1 : 0, $this->name);
+        Progress::exited(getmypid(), $sig, $e ? 1 : 0, $this->name);
 
         $this->process->exit();
     }
